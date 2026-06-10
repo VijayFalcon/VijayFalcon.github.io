@@ -18,7 +18,7 @@ Live at: **[vijayfalcon.github.io](https://vijayfalcon.github.io)**
 
 **Experience** — timeline of education, internship, and club roles.
 
-**Contact** — email, LinkedIn, GitHub.
+**Contact** — Email, LinkedIn, GitHub.
 
 ---
 
