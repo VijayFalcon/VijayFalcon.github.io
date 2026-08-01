@@ -1111,7 +1111,45 @@
         </div>
       </div>
 
-      <!-- Dynamic repos injected here by JS -->
+      <!-- Featured: Solar Irradiance Forecasting -->
+<div class="project-card featured reveal">
+<div>
+<div class="project-emoji">☀️</div>
+<h3 class="project-name">Solar Irradiance Forecasting (Conformal Prediction)</h3>
+<p class="project-desc">
+Uncertainty-aware solar irradiance forecasting system spanning five Indian climate zones,
+built on eleven years of NASA POWER and NSRDB satellite data. CNN-LSTM and PatchTST Transformer
+models generate the point forecasts, split conformal prediction wraps each one with a
+statistically valid uncertainty interval, and SHAP explains which atmospheric and temporal
+features drive predictions differently across hot-dry, humid, temperate, and cold regions.
+Built during a research internship at the Centre for Smart Grid Technologies, VIT Chennai,
+with findings targeting a Scopus-indexed publication.
+</p>
+<div class="project-tags">
+<span class="project-tag tag-ml">PyTorch</span>
+<span class="project-tag tag-ml">Conformal Prediction</span>
+<span class="project-tag tag-ai">SHAP</span>
+<span class="project-tag tag-data">Time-Series</span>
+<span class="project-tag tag-stack">PatchTST</span>
+</div>
+<a class="project-link" href="https://github.com/VijayFalcon/solar-irradiance-conformal-forecasting" target="_blank">View on GitHub &rarr;</a>
+<div style="margin-top:10px;">
+<a class="project-link" href="https://vijayfalcon.github.io/solar-irradiance-conformal-forecasting/" target="_blank">Live Dashboard &rarr;</a>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:20px;background:rgba(0,255,224,0.02);border:1px solid var(--border);border-radius:4px;">
+<div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--neon);margin-bottom:8px;">Pipeline</div>
+<div style="display:flex;flex-direction:column;gap:12px;font-size:0.78rem;color:var(--dim);">
+<div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon);min-width:10px;">&#9658;</span> CNN-LSTM and PatchTST for point forecasts</div>
+<div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon2);min-width:10px;">&#9658;</span> Split conformal prediction for calibrated intervals</div>
+<div style="display:flex;align-items:center;gap:12px;"><span style="color:#a78bfa;min-width:10px;">&#9658;</span> SHAP for cross-zone feature attribution</div>
+<div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--accent);min-width:10px;">&#9658;</span> 5 BEE climate zones: hot-dry, humid, composite, temperate, cold</div>
+<div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon);min-width:10px;">&#9658;</span> 11 years of NASA POWER + NSRDB data</div>
+</div>
+</div>
+</div>
+
+<!-- Dynamic repos injected here by JS -->
       <div id="gh-projects-loading" style="grid-column:span 2;display:flex;align-items:center;gap:12px;padding:32px;color:var(--muted);font-size:0.82rem;">
         <span style="display:inline-block;width:14px;height:14px;border:2px solid var(--border);border-top-color:var(--neon);border-radius:50%;animation:spin 0.8s linear infinite;flex-shrink:0;"></span>
         Fetching latest repos from GitHub...
@@ -1242,7 +1280,7 @@
     ];
 
     // Skip the featured repo and any forks/config repos you don't want shown
-    const SKIP = ['MEDIQA-CORE', 'TumorClassifier', `${GITHUB_USER}`, `${GITHUB_USER}.github.io`];
+    const SKIP = ['MEDIQA-CORE', 'TumorClassifier', `${GITHUB_USER}`, `${GITHUB_USER}.github.io`, 'solar-irradiance-conformal-forecasting'];
 
     // Language -> tag color class
     const LANG_TAG = { Python: 'tag-ml', JavaScript: 'tag-stack', TypeScript: 'tag-stack', Jupyter: 'tag-data', HTML: 'tag-stack', 'C++': 'tag-stack', Java: 'tag-stack' };
