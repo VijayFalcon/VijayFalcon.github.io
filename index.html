@@ -965,6 +965,7 @@
         <div class="skill-category">Data &amp; Infrastructure</div>
         <div class="skill-tags">
           <span class="skill-tag">Vector DBs</span>
+          <span class="skill-tag">Qdrant</span>
           <span class="skill-tag">PostgreSQL</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">AWS DynamoDB</span>
@@ -1058,9 +1059,9 @@
       <div class="bar-row reveal">
         <div class="bar-meta">
           <span class="bar-label">Vector Databases</span>
-          <span class="bar-pct">78%</span>
+          <span class="bar-pct">85%</span>
         </div>
-        <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
       </div>
     </div>
   </section>
@@ -1074,6 +1075,43 @@
     </div>
 
     <div class="projects-grid">
+
+      <!-- Featured: CardioGuard -->
+      <div class="project-card featured reveal">
+        <div>
+          <div class="project-emoji">🫀</div>
+          <h3 class="project-name">CardioGuard</h3>
+          <p class="project-desc">
+            Safety-first clinical decision support and patient consultation system for hypertension
+            management. A deterministic emergency fast-path escalates hypertensive crises and red-flag
+            symptoms in under 10ms without waiting on LLM inference, while a hybrid dense-sparse
+            retrieval engine (Qdrant) with cross-encoder reranking grounds every non-emergency response
+            in official clinical guidelines. A finite-state dialogue router accumulates patient context
+            across turns and enforces strict clinical action categorization, and a multi-tier LLM
+            failover pipeline keeps the system responsive even when upstream providers degrade.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag tag-stack">FastAPI</span>
+            <span class="project-tag tag-stack">Streamlit</span>
+            <span class="project-tag tag-data">PostgreSQL</span>
+            <span class="project-tag tag-data">Qdrant</span>
+            <span class="project-tag tag-ai">RAG</span>
+            <span class="project-tag tag-ai">LLM Failover</span>
+            <span class="project-tag tag-stack">460+ Tests</span>
+          </div>
+          <a class="project-link" href="https://github.com/VijayFalcon/CardioGuard" target="_blank">View on GitHub &rarr;</a>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:20px;background:rgba(0,255,224,0.02);border:1px solid var(--border);border-radius:4px;">
+          <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--neon);margin-bottom:8px;">Architecture</div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:0.78rem;color:var(--dim);">
+            <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--accent);min-width:10px;">&#9658;</span> Deterministic emergency fast-path (&lt;10ms)</div>
+            <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon);min-width:10px;">&#9658;</span> Hybrid dense-sparse retrieval (Qdrant) + reranking</div>
+            <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon2);min-width:10px;">&#9658;</span> Finite-state dialogue router with patient context</div>
+            <div style="display:flex;align-items:center;gap:12px;"><span style="color:#a78bfa;min-width:10px;">&#9658;</span> Multi-tier LLM failover for resilient generation</div>
+            <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--neon);min-width:10px;">&#9658;</span> 460+ passing tests across unit/integration/adversarial suites</div>
+          </div>
+        </div>
+      </div>
 
       <!-- Featured -->
       <div class="project-card featured reveal">
@@ -1280,7 +1318,7 @@ with findings targeting a Scopus-indexed publication.
     ];
 
     // Skip the featured repo and any forks/config repos you don't want shown
-    const SKIP = ['MEDIQA-CORE', 'TumorClassifier', `${GITHUB_USER}`, `${GITHUB_USER}.github.io`, 'solar-irradiance-conformal-forecasting'];
+    const SKIP = ['MEDIQA-CORE', 'TumorClassifier', 'CardioGuard', `${GITHUB_USER}`, `${GITHUB_USER}.github.io`, 'solar-irradiance-conformal-forecasting'];
 
     // Language -> tag color class
     const LANG_TAG = { Python: 'tag-ml', JavaScript: 'tag-stack', TypeScript: 'tag-stack', Jupyter: 'tag-data', HTML: 'tag-stack', 'C++': 'tag-stack', Java: 'tag-stack' };
@@ -1296,6 +1334,7 @@ with findings targeting a Scopus-indexed publication.
       if (n.includes('aesthetic') || n.includes('design') || n.includes('interior')) return '🎨';
       if (n.includes('sentiment') || n.includes('nlp') || n.includes('text')) return '📊';
       if (n.includes('brain') || n.includes('tumor') || n.includes('mediq')) return '🧠';
+      if (n.includes('cardio') || n.includes('hypertension') || n.includes('health')) return '🫀';
       if (n.includes('game') || n.includes('unity')) return '🎮';
       if (n.includes('bot') || n.includes('agent')) return '🤖';
       if (n.includes('api') || n.includes('backend') || n.includes('server')) return '⚙️';
